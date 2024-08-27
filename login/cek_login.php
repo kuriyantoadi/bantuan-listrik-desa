@@ -24,6 +24,7 @@ if ($cek > 0) {
 
     if ($login['status'] == "admin-lisdes") {
         $_SESSION['status'] = "admin-lisdes";
+        $_SESSION['username'] = $username;
         header("location:../admin-lisdes/index.php");
     } elseif ($login['status'] == "petugas") {
         $_SESSION['status'] = "petugas";

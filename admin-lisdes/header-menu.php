@@ -52,9 +52,9 @@
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                                 <div class="drop-heading">
-                                                    <div class="text-center">
-                                                        <h5 class="text-dark mb-0 fs-14 fw-semibold">Percy Kewshun</h5>
-                                                        <small class="text-muted">Senior Admin</small>
+                                                    <div class="text-left">
+                                                        <h5 class="text-dark mb-0 fs-14 fw-semibold"><?= $_SESSION['username'] ?></h5>
+                                                        <small class="text-muted"><?= $_SESSION['status'] ?></small>
                                                     </div>
                                                 </div>
                                                 
@@ -109,7 +109,7 @@
                             </li>
                             
                             <li>
-                                <a class="side-menu__item has-link" href="landing-page.html" target="_blank">
+                                <a class="side-menu__item has-link" href="listrik-desa.php" >
                                 <i class="side-menu__icon fe fe-zap"></i>
                                 <span class="side-menu__label">Listrik Desa</span></a>
                             </li>
@@ -124,6 +124,31 @@
                                 <a class="side-menu__item has-link" href="landing-page.html" target="_blank">
                                 <i class="side-menu__icon fe fe-users"></i>
                                 <span class="side-menu__label">Staff Kelurahan</span></a>
+                            </li>
+
+                            <li class="slide">
+                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)">
+                                    <i class="side-menu__icon fe fe-cpu"></i>
+                                    <span class="side-menu__label">Data Master</span><i
+                                        class="angle fe fe-chevron-right"></i>
+                                </a>
+								<ul class="slide-menu">
+									<li class="panel sidetab-menu">
+										
+										<div class="panel-body tabs-menu-body p-0 border-0">
+											<div class="tab-content">
+												<div class="tab-pane active" id="side25">
+													<ul class="sidemenu-list">
+                                                        <li class="side-menu-label1"><a href="javascript:void(0)">Data Master</a></li>
+                                                        <li><a href="kab_kota.php" class="slide-item">Kabupaten/Kota</a></li>
+                                                        <li><a href="javascript:void(0)" class="slide-item">Kecamatan</a></li>
+                                                        <li><a href="javascript:void(0)" class="slide-item">Desa</a></li>
+													</ul>                                                    
+												</div>												
+											</div>
+										</div>
+									</li>
+								</ul>
                             </li>
 
                             
