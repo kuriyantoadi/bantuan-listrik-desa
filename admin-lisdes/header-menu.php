@@ -141,8 +141,8 @@
 													<ul class="sidemenu-list">
                                                         <li class="side-menu-label1"><a href="javascript:void(0)">Data Master</a></li>
                                                         <li><a href="kab_kota.php" class="slide-item">Kabupaten/Kota</a></li>
-                                                        <li><a href="javascript:void(0)" class="slide-item">Kecamatan</a></li>
-                                                        <li><a href="javascript:void(0)" class="slide-item">Desa</a></li>
+                                                        <li><a href="kec.php" class="slide-item">Kecamatan</a></li>
+                                                        <li><a href="desa.php" class="slide-item">Desa</a></li>
 													</ul>                                                    
 												</div>												
 											</div>

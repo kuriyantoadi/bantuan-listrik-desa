@@ -4,6 +4,8 @@ session_start();
 if ($_SESSION['status'] != "admin-lisdes") {
     header("location:../login/index.php?pesan=belum_login");
 }
+
+include '../koneksi.php';
 ?>
 
 <!doctype html>
