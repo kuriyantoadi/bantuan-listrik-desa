@@ -32,7 +32,7 @@
                                 <?php include('../alert.php') ?>
 
                                 <button class="btn btn-icon btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#largemodal_tambah">Tambah<i class="fe fe-plus"></i></button>
-                                <?php include('kec_modal_tambah.php') ?>
+                                <?php include('desa_modal_tambah.php') ?>
 
                                 <table class="table table-bordered text-nowrap border-bottom" id="basic-datatable">
                                     <thead>
@@ -60,10 +60,10 @@
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
                                             <td class="text-center">
-                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_kecamatan'] ?>"><i class="fe fe-edit"></i></button>
-                                                <a href="../data-master/kec_hapus.php?id_kecamatan=<?= $d['id_kecamatan'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
-                                                onclick="return confirm('Anda yakin Hapus data kecamatan <?php echo $d['nama_kecamatan']; ?> ?')"><i class="fe fe-trash-2"></i></a>
-                                                <?php include('kec_modal.php') ?>                                                
+                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_desa'] ?>"><i class="fe fe-edit"></i></button>
+                                                <a href="../data-master/desa_hapus.php?id_desa=<?= $d['id_desa'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
+                                                onclick="return confirm('Anda yakin Hapus data desa <?php echo $d['nama_desa']; ?> ?')"><i class="fe fe-trash-2"></i></a>
+                                                <?php include('desa_modal.php') ?>                                                
                                             </td>
                                         </tr>
 
