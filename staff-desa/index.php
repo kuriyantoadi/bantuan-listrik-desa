@@ -66,7 +66,7 @@
                                                 <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_staff_desa'] ?>"><i class="fe fe-edit"></i></button>
                                                 <a href="../staff-desa/staff_desa_hapus.php?id_staff_desa=<?= $d['id_staff_desa'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
                                                 onclick="return confirm('Anda yakin Hapus data staff desa <?php echo $d['nama_staff_desa']; ?> ?')"><i class="fe fe-trash-2"></i></a>
-                                                <?php include('staff_desa_modal.php') ?>                                                
+                                                <?php include('staff_desa_modal_edit.php') ?>                                                
                                             </td>
                                         </tr>
 

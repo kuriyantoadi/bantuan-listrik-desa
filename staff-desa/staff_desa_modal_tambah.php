@@ -17,9 +17,9 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <label class="col-md-3 form-label">Nama Staff Keluarahan</label>
+                        <label class="col-md-3 form-label">Nama Staff Desa</label>
                         <div class="col-md-9">
-                            <input type="text" name="nama_staff_keluarahan" class="form-control" required>
+                            <input type="text" name="nama_staff_desa" class="form-control" required>
                         </div>
                     </div>
                     <div class="row mb-4">

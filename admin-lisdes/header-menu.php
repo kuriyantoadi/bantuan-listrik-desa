@@ -109,9 +109,9 @@
                             </li>
                             
                             <li>
-                                <a class="side-menu__item has-link" href="listrik-desa.php" >
+                                <a class="side-menu__item has-link" href="penerima-lisdes.php" >
                                 <i class="side-menu__icon fe fe-zap"></i>
-                                <span class="side-menu__label">Listrik Desa</span></a>
+                                <span class="side-menu__label">Penerima Listrik Desa</span></a>
                             </li>
 
                              <li>
