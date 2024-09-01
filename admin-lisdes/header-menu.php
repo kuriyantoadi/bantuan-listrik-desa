@@ -97,7 +97,7 @@
                                 <h3>Menu</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.html">
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="index.php">
                                 <i class="side-menu__icon fe fe-home"></i>
                                 <span class="side-menu__label">Dashboard</span></a>
                             </li>
@@ -121,9 +121,9 @@
                             </li>
 
                              <li>
-                                <a class="side-menu__item has-link" href="landing-page.html" target="_blank">
+                                <a class="side-menu__item has-link" href="staff-desa.php">
                                 <i class="side-menu__icon fe fe-users"></i>
-                                <span class="side-menu__label">Staff Kelurahan</span></a>
+                                <span class="side-menu__label">Staff Desa</span></a>
                             </li>
 
                             <li class="slide">
