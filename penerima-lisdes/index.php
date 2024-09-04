@@ -39,7 +39,7 @@
                                         <tr>
                                             <th class="wd-15p border-bottom-0 text-center">No</th>
                                             <th class="wd-15p border-bottom-0 text-center">Nama Penerima</th>
-                                            <th class="wd-15p border-bottom-0 text-center">Nama Kab/Kota</th>                                           
+                                            <!-- <th class="wd-15p border-bottom-0 text-center">Nama Kab/Kota</th>                                            -->
                                             <th class="wd-15p border-bottom-0 text-center">Nama Kecamatan</th>
                                             <th class="wd-15p border-bottom-0 text-center">Nama Desa</th>
                                             <th class="wd-15p border-bottom-0 text-center">Pemasangan</th>                                                                                                                                                                            
@@ -50,17 +50,19 @@
                                         <?php
                                         include '../koneksi.php';
                                         $no = 1;
-                                        $data = mysqli_query($koneksi, "SELECT * from tb_penerima_lisdes, tb_kab_kota, tb_kecamatan, tb_desa WHERE 
-                                        tb_penerima_lisdes.id_kab_kota=tb_kab_kota.id_kab_kota AND 
-                                        tb_penerima_lisdes.id_kecamatan=tb_kecamatan.id_kecamatan AND 
-                                        tb_penerima_lisdes.id_desa=tb_desa.id_desa");
+                                        $data = mysqli_query($koneksi, "SELECT tb_penerima_lisdes.*, tb_kab_kota.nama_kab_kota, tb_kecamatan.nama_kecamatan, tb_desa.nama_desa
+                                                                        FROM tb_penerima_lisdes
+                                                                        JOIN tb_kab_kota ON tb_penerima_lisdes.id_kab_kota = tb_kab_kota.id_kab_kota
+                                                                        JOIN tb_kecamatan ON tb_penerima_lisdes.id_kecamatan = tb_kecamatan.id_kecamatan
+                                                                        JOIN tb_desa ON tb_penerima_lisdes.id_desa = tb_desa.id_desa;
+                                                                        ");
                                         while ($d = mysqli_fetch_array($data)) {
                                         ?>
 
                                         <tr>
                                             <td class="text-center"><?= $no++ ?></td>
                                             <td class=""><?= $d['nama_calon_konsumen'] ?></td>
-                                            <td class=""><?php echo $d['id_kab_kota'] ?></td>
+                                            <!-- <td class=""><?php echo $d['id_kab_kota'] ?></td> -->
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
                                             <td class="text-center">

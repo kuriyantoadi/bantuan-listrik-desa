@@ -53,8 +53,9 @@
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                                 <div class="drop-heading">
                                                     <div class="text-left">
-                                                        <h5 class="text-dark mb-0 fs-14 fw-semibold"><?= $_SESSION['username'] ?></h5>
-                                                        <small class="text-muted"><?= $_SESSION['status'] ?></small>
+                                                        <h3 class="text-dark mb-0 fs-18 fw-semibold"><?= $_SESSION['username'] ?></h3>
+                                                        <h6 class="text-dark mb-0 fs-12 fw-semibold">Desa <?= $nama_desa; ?></h6>
+                                                        <small class="text-muted"><?= $_SESSION['status'] ?> </small>
                                                     </div>
                                                 </div>
                                                 

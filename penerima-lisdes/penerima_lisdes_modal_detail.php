@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit Penerima Lisdes</h5>
+                <h5 class="modal-title">Detail Penerima Lisdes</h5>
                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -35,8 +35,6 @@
                             $result_kab = mysqli_query($koneksi, $query_kab);
                             $kab_kota = mysqli_fetch_assoc($result_kab);
                             ?>
-
-                            <?php var_dump($d['id_kab_kota']) ?>
                             <input type="text" id="view_id_kab_kota" class="form-control" value="<?= $kab_kota['nama_kab_kota']; ?>" disabled>
                         </div>
                     </div>
