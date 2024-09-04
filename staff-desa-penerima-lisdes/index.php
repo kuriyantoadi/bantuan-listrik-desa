@@ -28,7 +28,6 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                
                                 <?php include('../alert.php') ?>
 
                                 <button class="btn btn-icon btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#largemodal_tambah">Tambah<i class="fe fe-plus"></i></button>
@@ -38,8 +37,7 @@
                                     <thead>
                                         <tr>
                                             <th class="wd-15p border-bottom-0 text-center">No</th>
-                                            <th class="wd-15p border-bottom-0 text-center">Nama Penerima</th>
-                                            <th class="wd-15p border-bottom-0 text-center">Nama Kab/Kota</th>                                           
+                                            <th class="wd-15p border-bottom-0 text-center">Nama Penerima</th>                                           
                                             <th class="wd-15p border-bottom-0 text-center">Nama Kecamatan</th>
                                             <th class="wd-15p border-bottom-0 text-center">Nama Desa</th>
                                             <th class="wd-15p border-bottom-0 text-center">Pemasangan</th>                                                                                                                                                                            
@@ -50,8 +48,7 @@
                                         <?php
                                         include '../koneksi.php';
                                         $no = 1;
-                                        $data = mysqli_query($koneksi, "SELECT * from tb_penerima_lisdes, tb_kab_kota, tb_kecamatan, tb_desa WHERE 
-                                        tb_penerima_lisdes.id_kab_kota=tb_kab_kota.id_kab_kota AND 
+                                        $data = mysqli_query($koneksi, "SELECT * from tb_penerima_lisdes, tb_kecamatan, tb_desa WHERE 
                                         tb_penerima_lisdes.id_kecamatan=tb_kecamatan.id_kecamatan AND 
                                         tb_penerima_lisdes.id_desa=tb_desa.id_desa");
                                         while ($d = mysqli_fetch_array($data)) {
@@ -60,7 +57,6 @@
                                         <tr>
                                             <td class="text-center"><?= $no++ ?></td>
                                             <td class=""><?= $d['nama_calon_konsumen'] ?></td>
-                                            <td class=""><?php echo $d['id_kab_kota'] ?></td>
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
                                             <td class="text-center">
@@ -78,13 +74,10 @@
                                             </td>
 
                                             <td class="text-center">
+                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-edit"></i></button>
                                                 <a href="../penerima-lisdes/penerima_lisdes_hapus.php?id_penerima_lisdes=<?= $d['id_penerima_lisdes'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
                                                 onclick="return confirm('Anda yakin Hapus data Penerima Listrik Desa <?php echo $d['nama_calon_konsumen']; ?> ?')"><i class="fe fe-trash-2"></i></a>
-                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-edit"></i></button>
-                                                <button class="btn btn-icon btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#largemodal_detail<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-eye"></i></button>
-                                                
-                                                <?php include('penerima_lisdes_modal_edit.php') ?>
-                                                <?php include('penerima_lisdes_modal_detail.php') ?>                                                                                                
+                                                <?php include('penerima_lisdes_modal_edit.php') ?>                                                
                                             </td>
                                         </tr>
 

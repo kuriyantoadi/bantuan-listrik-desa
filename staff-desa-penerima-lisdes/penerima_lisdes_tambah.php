@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status'] != "admin-lisdes") {
+if ($_SESSION['status'] != "staff-desa-user") {
     header("location:../login.php?pesan=belum_login");
     exit();
 }
@@ -25,6 +25,8 @@ $petugas_survei = mysqli_real_escape_string($koneksi, $_POST['petugas_survei']);
 $status_pemasangan = mysqli_real_escape_string($koneksi, $_POST['status_pemasangan']);
 $catatan = mysqli_real_escape_string($koneksi, $_POST['catatan']);
 
+// exit();
+
 // Cek apakah NIK sudah ada
 $cek_nik = mysqli_query($koneksi, "SELECT nik FROM tb_penerima_lisdes WHERE nik='$nik'");
 
@@ -36,7 +38,7 @@ if (mysqli_num_rows($cek_nik) > 0) {
 
 // Masukkan data ke dalam database
 $query = "INSERT INTO tb_penerima_lisdes (tgl_permintaan, nama_calon_konsumen, nik, alamat, id_kab_kota, id_kecamatan, id_desa, membutuhkan_bantuan, menunggu_bantuan, menaati_ketentuan, jarak_rumah, petugas_survei, status_pemasangan, catatan) VALUES 
-                                            ('$tgl_permintaan', '$nama_calon_konsumen', '$nik', '$alamat', '$id_kab_kota', '$id_kecamatan', '$id_desa', '$membutuhkan_bantuan', '$menunggu_bantuan', '$menaati_ketentuan', '$jarak_rumah', '$petugas_survei', '$status_pemasangan', '$catatan')";
+                                        ('$tgl_permintaan', '$nama_calon_konsumen', '$nik', '$alamat', '$id_kab_kota', '$id_kecamatan', '$id_desa', '$membutuhkan_bantuan', '$menunggu_bantuan', '$menaati_ketentuan', '$jarak_rumah', '$petugas_survei', '$status_pemasangan', '$catatan')";
 
 $cek_tambah = mysqli_query($koneksi, $query);
 
