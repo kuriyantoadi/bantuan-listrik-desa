@@ -22,6 +22,12 @@
                             <input type="text" name="nama_staff_desa" class="form-control" required>
                         </div>
                     </div>
+                     <div class="row mb-4">
+                        <label class="col-md-3 form-label">Password</label>
+                        <div class="col-md-9">
+                            <input type="text" name="password" class="form-control" required>
+                        </div>
+                    </div>
                     <div class="row mb-4">
                         <label class="col-md-3 form-label">Nama Kabupaten/Kota</label>
                         <div class="col-md-9">
@@ -55,15 +61,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mb-4">
-                        <label class="col-md-3 form-label">Status Staff</label>
-                        <div class="col-md-9">
-                            <select name="status_staff" class="form-control" required>
-                                <option value="Aktif">Aktif</option>
-                                <option value="Nonaktif">Nonaktif</option>
-                            </select>
-                        </div>
-                    </div>
+                   
                 </div>
                 <div class="modal-footer">
                     <input type="submit" class="btn btn-sm btn-primary" value="Tambah">

@@ -10,11 +10,12 @@ $session_user = $_SESSION['status'];
 include '../koneksi.php';
 
 $username = mysqli_real_escape_string($koneksi, $_POST['username']);
+$password = sha1(mysqli_real_escape_string($koneksi, $_POST['username']));
 $nama_staff_desa = mysqli_real_escape_string($koneksi, $_POST['nama_staff_desa']);
 $id_kab_kota = mysqli_real_escape_string($koneksi, $_POST['id_kab_kota']);
 $id_kecamatan = mysqli_real_escape_string($koneksi, $_POST['id_kecamatan']);
 $id_desa = mysqli_real_escape_string($koneksi, $_POST['id_desa']);
-$status_staff = mysqli_real_escape_string($koneksi, $_POST['status_staff']);
+$status = "staff-desa-user";
 
 // Cek apakah username mengandung spasi
 if (preg_match('/\s/', $username)) {
@@ -23,8 +24,8 @@ if (preg_match('/\s/', $username)) {
 }
 
 // Insert data into the database
-$query = "INSERT INTO tb_staff_desa (username, nama_staff_desa, id_kab_kota, id_kecamatan, id_desa, status_staff) 
-          VALUES ('$username', '$nama_staff_desa', '$id_kab_kota', '$id_kecamatan', '$id_desa', '$status_staff')";
+$query = "INSERT INTO tb_staff_desa (username, password, nama_staff_desa, id_kab_kota, id_kecamatan, id_desa, status) 
+          VALUES ('$username', '$password', '$nama_staff_desa', '$id_kab_kota', '$id_kecamatan', '$id_desa', '$status')";
 
 $cek_tambah = mysqli_query($koneksi, $query);
 
