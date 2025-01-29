@@ -31,7 +31,7 @@
                                 
                                 <?php include('../alert.php') ?>
 
-                                <button class="btn btn-icon btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#largemodal_tambah">Tambah<i class="fe fe-plus"></i></button>
+                                <!-- <button class="btn btn-icon btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#largemodal_tambah">Tambah<i class="fe fe-plus"></i></button> -->
                                 <?php include('penerima_lisdes_modal_tambah.php') ?>
 
                                 <table class="table table-bordered text-nowrap border-bottom" id="basic-datatable">

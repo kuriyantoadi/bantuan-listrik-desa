@@ -47,7 +47,6 @@
                                     <tbody>
                                         <?php
                                         include '../koneksi.php';
-                                       
                                         $no = 1;
                                         $data = mysqli_query($koneksi, "SELECT tb_penerima_lisdes.*, tb_kab_kota.nama_kab_kota, tb_kecamatan.nama_kecamatan, tb_desa.nama_desa
                                                                         FROM tb_penerima_lisdes
@@ -65,8 +64,8 @@
                                             <td class=""><?= $d['nama_desa'] ?></td>
                                             <td class="text-center">
                                                 <?php
-                                                if ($d['status_pemasangan'] == 'Pendataan') {
-                                                    echo '<span class="badge bg-warning">Pendataan</span>';
+                                                if ($d['status_pemasangan'] == 'Belum Terpasang') {
+                                                    echo '<span class="badge bg-warning">Belum Terpasang</span>';
                                                 } elseif ($d['status_pemasangan'] == 'Tolak') {
                                                     echo '<span class="badge bg-danger">Tolak</span>';
                                                 } elseif ($d['status_pemasangan'] == 'Sudah Terpasang') {

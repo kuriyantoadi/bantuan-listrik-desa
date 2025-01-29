@@ -24,7 +24,7 @@ if (preg_match('/\s/', $username)) {
 }
 
 // Insert data into the database
-$query = "INSERT INTO tb_staff_desa (username, password, nama_staff_desa, id_kab_kota, id_kecamatan, id_desa, status) 
+$query = "INSERT INTO tb_user (username, password, nama_staff_desa, id_kab_kota, id_kecamatan, id_desa, status) 
           VALUES ('$username', '$password', '$nama_staff_desa', '$id_kab_kota', '$id_kecamatan', '$id_desa', '$status')";
 
 $cek_tambah = mysqli_query($koneksi, $query);

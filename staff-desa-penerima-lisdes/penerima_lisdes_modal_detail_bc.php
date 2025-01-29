@@ -68,12 +68,7 @@
                             <input type="text" id="view_membutuhkan_bantuan" class="form-control" value="<?= $d['membutuhkan_bantuan'] ?>" disabled>
                         </div>
                     </div>
-                    <div class="row mb-4">
-                        <label class="col-md-3 form-label" for="view_menunggu_bantuan">Menunggu Bantuan</label>
-                        <div class="col-md-9">
-                            <input type="text" id="view_menunggu_bantuan" class="form-control" value="<?= $d['menunggu_bantuan'] ?>" disabled>
-                        </div>
-                    </div>
+                  
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="view_menaati_ketentuan">Menaati Ketentuan</label>
                         <div class="col-md-9">
@@ -95,7 +90,7 @@
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="view_status_pemasangan">Status Pemasangan</label>
                         <div class="col-md-9">
-                            <input type="text" id="view_status_pemasangan" class="form-control" value="<?= $d['status_pemasangan'] ?>" disabled>
+                            <input type="text" id="" class="form-control" value="<?= $d['status_pemasangan'] ?>" disabled>
                         </div>
                     </div>
                     <div class="row mb-4">

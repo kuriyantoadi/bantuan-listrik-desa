@@ -66,6 +66,16 @@
                 </button>
             </div>
             ";
+
+        } elseif ($_GET['pesan'] == "nik_sudah_ada") {
+            echo "
+           <div class='alert alert-warning alert-dismissible fade show' role='alert pt-5' style='margin-top: 20px'>
+                <span class='alert-inner--text'><strong>Tambah Data Gagal, Data Sudah NIK Sudah Ada</strong></span>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'>
+                    <span aria-hidden='true'>×</span>
+                </button>
+            </div>
+            ";
         } 
         
     }

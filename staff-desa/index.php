@@ -49,10 +49,10 @@
                                         <?php
                                         include '../koneksi.php';
                                         $no = 1;
-                                        $data = mysqli_query($koneksi, "SELECT * from tb_staff_desa, tb_kecamatan, tb_kab_kota, tb_desa WHERE 
-                                        tb_staff_desa.id_kab_kota=tb_kab_kota.id_kab_kota AND 
-                                        tb_staff_desa.id_kecamatan=tb_kecamatan.id_kecamatan AND
-                                        tb_staff_desa.id_desa=tb_desa.id_desa");
+                                        $data = mysqli_query($koneksi, "SELECT * from tb_user, tb_kecamatan, tb_kab_kota, tb_desa WHERE 
+                                        tb_user.id_kab_kota=tb_kab_kota.id_kab_kota AND 
+                                        tb_user.id_kecamatan=tb_kecamatan.id_kecamatan AND
+                                        tb_user.id_desa=tb_desa.id_desa");
                                         while ($d = mysqli_fetch_array($data)) {
                                         ?>
 
@@ -63,8 +63,8 @@
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
                                             <td class="text-center">
-                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_staff_desa'] ?>"><i class="fe fe-edit"></i></button>
-                                                <a href="../staff-desa/staff_desa_hapus.php?id_staff_desa=<?= $d['id_staff_desa'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
+                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_user'] ?>"><i class="fe fe-edit"></i></button>
+                                                <a href="../staff-desa/staff_desa_hapus.php?id_user=<?= $d['id_user'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
                                                 onclick="return confirm('Anda yakin Hapus data staff desa <?php echo $d['nama_staff_desa']; ?> ?')"><i class="fe fe-trash-2"></i></a>
                                                 <?php include('staff_desa_modal_edit.php') ?>                                                
                                             </td>

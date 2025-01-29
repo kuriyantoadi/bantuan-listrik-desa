@@ -10,12 +10,12 @@ $session_user = $_SESSION['status'];
 include '../koneksi.php';
 
 // Ambil ID staff yang akan dihapus dari URL
-$id_staff_desa = mysqli_real_escape_string($koneksi, $_GET['id_staff_desa']);
+$id_user = mysqli_real_escape_string($koneksi, $_GET['id_user']);
 
 // Pastikan ID tidak kosong atau tidak valid
-if (!empty($id_staff_desa)) {
+if (!empty($id_user)) {
     // Lakukan query untuk menghapus data staff berdasarkan ID
-    $hapus_staff = mysqli_query($koneksi, "DELETE FROM tb_staff_desa WHERE id_staff_desa = '$id_staff_desa'");
+    $hapus_staff = mysqli_query($koneksi, "DELETE FROM tb_user WHERE id_user = '$id_user'");
 
     if ($hapus_staff) {
         // Jika berhasil dihapus

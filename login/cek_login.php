@@ -26,9 +26,12 @@ if ($cek > 0) {
         $_SESSION['status'] = "admin-lisdes";
         $_SESSION['username'] = $username;
         header("location:../admin-lisdes/index.php");
-    } elseif ($login['status'] == "petugas") {
-        $_SESSION['status'] = "petugas";
-        header("location:../petugas/index.php");
+    } elseif ($login['status'] == "admin-staff-desa") {
+        $_SESSION['status'] = "admin-staff-desa";
+        $_SESSION['id_desa'] = $login['id_desa'];
+        $_SESSION['id_kecamatan'] = $login['id_kecamatan'];
+        $_SESSION['id_kab_kota'] = $login['id_kab_kota'];
+        header("location:../admin-staff-desa/index.php");
     } elseif ($login['status'] == "manager") {
         $_SESSION['status'] = "manager";
         header("location:../manager/index.php");

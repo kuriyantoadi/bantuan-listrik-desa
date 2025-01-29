@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="largemodal_edit<?= $d['id_staff_desa']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="largemodal_edit<?= $d['id_user']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -11,7 +11,7 @@
             <div class="row mb-4">
                 <label class="col-md-3 form-label" for="username_edit">Username</label>
                 <div class="col-md-9">
-                <input type="hidden" name="id_staff_desa" value="<?= $d['id_staff_desa'] ?>" required>
+                <input type="hidden" name="id_user" value="<?= $d['id_user'] ?>" required>
                 <input type="text" id="username_edit" name="username" value="<?= $d['username'] ?>" class="form-control" required>
                 </div>
             </div>
