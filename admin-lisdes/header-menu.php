@@ -103,12 +103,6 @@
                             </li>
 
                             <li>
-                                <a class="side-menu__item has-link" href="landing-page.html" target="_blank">
-                                <i class="side-menu__icon fe fe-check-square"></i>
-                                <span class="side-menu__label">Verifikasi Data</span></a>
-                            </li>
-                            
-                            <li>
                                 <a class="side-menu__item has-link" href="penerima-lisdes.php" >
                                 <i class="side-menu__icon fe fe-zap"></i>
                                 <span class="side-menu__label">Penerima Listrik Desa</span></a>

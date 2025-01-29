@@ -4,99 +4,111 @@
             <div class="modal-header">
                 <h5 class="modal-title">Detail Penerima Lisdes</h5>
                 <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_nama_calon_konsumen">Nama Calon Konsumen</label>
+                    <label class="col-md-3 form-label">ID Penerima Lisdes</label>
                     <div class="col-md-9">
-                        <input type="text" id="view_nama_calon_konsumen" class="form-control" value="<?= $d['nama_calon_konsumen'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['id_penerima_lisdes'] ?>" disabled>
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_nik">NIK</label>
+                    <label class="col-md-3 form-label">Tanggal Permintaan</label>
                     <div class="col-md-9">
-                        <input type="text" id="view_nik" class="form-control" value="<?= $d['nik'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['tgl_permintaan'] ?>" disabled>
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_alamat">Alamat</label>
+                    <label class="col-md-3 form-label">Nama Calon Konsumen</label>
                     <div class="col-md-9">
-                        <textarea id="view_alamat" class="form-control" disabled><?= $d['alamat'] ?></textarea>
+                        <input type="text" class="form-control" value="<?= $d['nama_calon_konsumen'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">NIK</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['nik'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Alamat</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" disabled><?= $d['alamat'] ?></textarea>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Desa</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['id_desa'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Kecamatan</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['id_kecamatan'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Kabupaten/Kota</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['id_kab_kota'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Membutuhkan Bantuan</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['membutuhkan_bantuan'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Menaati Ketentuan</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['menaati_ketentuan'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Jarak Rumah</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['jarak_rumah'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Petugas Survei</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['petugas_survei'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Status Pemasangan</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" value="<?= $d['status_pemasangan'] ?>" disabled>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Catatan</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" disabled><?= $d['catatan'] ?></textarea>
                     </div>
                 </div>
                 
-                <!-- Bagian Menampilkan Foto -->
+                <!-- Menampilkan Foto -->
+                <?php 
+                $photos = ['photo_rumah' => 'Foto Rumah', 'photo_ktp' => 'Foto KTP', 'photo_sktm' => 'Foto SKTM', 'photo_kwh' => 'Foto KWH', 'photo_lampu' => 'Foto Lampu', 'photo_saklar' => 'Foto Saklar'];
+                foreach ($photos as $key => $label): ?>
                 <div class="row mb-4">
-                    <label class="col-md-3 form-label">Foto KTP</label>
+                    <label class="col-md-3 form-label"><?= $label ?></label>
                     <div class="col-md-9">
-                        <img src="../uploads/<?= basename($d['photo_ktp']) ?>" alt="Foto KTP" class="img-thumbnail" style="max-height: 200px;">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label">Foto Rumah</label>
-                    <div class="col-md-9">
-                        <img src="../uploads/<?= basename($d['photo_rumah']) ?>" alt="Foto Rumah" class="img-thumbnail" style="max-height: 200px;">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label">Foto SKTM</label>
-                    <div class="col-md-9">
-                        <?php if (!empty($d['photo_sktm'])): ?>
-                            <img src="../uploads/<?= basename($d['photo_sktm']) ?>" alt="Foto SKTM" class="img-thumbnail" style="max-height: 200px;">
+                        <?php if (!empty($d[$key])): ?>
+                            <img src="../uploads/<?= basename($d[$key]) ?>" alt="<?= $label ?>" class="img-thumbnail" style="max-height: 200px;">
                         <?php else: ?>
-                            <p class="text-muted">Belum ada foto SKTM.</p>
+                            <p class="text-muted">Belum ada <?= strtolower($label) ?>.</p>
                         <?php endif; ?>
                     </div>
                 </div>
-                <!-- Akhir Bagian Foto -->
-
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_id_kab_kota">Kabupaten/Kota</label>
-                    <div class="col-md-9">
-                        <?php
-                        $query_kab = "SELECT nama_kab_kota FROM tb_kab_kota WHERE id_kab_kota = '" . $d['id_kab_kota'] . "'";
-                        $result_kab = mysqli_query($koneksi, $query_kab);
-                        $kab_kota = mysqli_fetch_assoc($result_kab);
-                        ?>
-                        <input type="text" id="view_id_kab_kota" class="form-control" value="<?= $kab_kota['nama_kab_kota']; ?>" disabled>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_id_kecamatan">Kecamatan</label>
-                    <div class="col-md-9">
-                        <?php
-                        $query_kec = "SELECT nama_kecamatan FROM tb_kecamatan WHERE id_kecamatan = '" . $d['id_kecamatan'] . "'";
-                        $result_kec = mysqli_query($koneksi, $query_kec);
-                        $kecamatan = mysqli_fetch_assoc($result_kec);
-                        ?>
-                        <input type="text" id="view_id_kecamatan" class="form-control" value="<?= $kecamatan['nama_kecamatan']; ?>" disabled>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_id_desa">Desa</label>
-                    <div class="col-md-9">
-                        <?php
-                        $query_desa = "SELECT nama_desa FROM tb_desa WHERE id_desa = '" . $d['id_desa'] . "'";
-                        $result_desa = mysqli_query($koneksi, $query_desa);
-                        $desa = mysqli_fetch_assoc($result_desa);
-                        ?>
-                        <input type="text" id="view_id_desa" class="form-control" value="<?= $desa['nama_desa']; ?>" disabled>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_membutuhkan_bantuan">Membutuhkan Bantuan</label>
-                    <div class="col-md-9">
-                        <input type="text" id="view_membutuhkan_bantuan" class="form-control" value="<?= $d['membutuhkan_bantuan'] ?>" disabled>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label" for="view_catatan">Catatan</label>
-                    <div class="col-md-9">
-                        <textarea id="view_catatan" class="form-control" disabled><?= $d['catatan'] ?></textarea>
-                    </div>
-                </div>
+                <?php endforeach; ?>
+                <!-- Akhir Menampilkan Foto -->
             </div>
             <div class="modal-footer">
                 <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>

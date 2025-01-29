@@ -63,16 +63,24 @@
                                             <td class=""><?= $d['nama_calon_konsumen'] ?></td>
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
-                                            <td class="text-center">
+                                           <td class="text-center">
                                                 <?php
-                                                if ($d['status_pemasangan'] == 'Pendataan') {
-                                                    echo '<span class="badge bg-warning">Pendataan</span>';
-                                                } elseif ($d['status_pemasangan'] == 'Tolak') {
-                                                    echo '<span class="badge bg-danger">Tolak</span>';
-                                                } elseif ($d['status_pemasangan'] == 'Sudah Terpasang') {
-                                                    echo '<span class="badge bg-success">Sudah Terpasang</span>';
-                                                } else {
-                                                    echo '<span class="badge bg-secondary">Tidak Diketahui</span>';
+                                                switch ($d['status_pemasangan']) {
+                                                    case 'Pendataan':
+                                                        echo '<span class="badge bg-primary">Pendataan</span>';
+                                                        break;
+                                                    case 'Pemasangan':
+                                                        echo '<span class="badge bg-info">Pemasangan</span>';
+                                                        break;
+                                                    case 'Monitoring':
+                                                        echo '<span class="badge bg-warning">Monitoring</span>';
+                                                        break;
+                                                    case 'Selesai':
+                                                        echo '<span class="badge bg-success">Selesai</span>';
+                                                        break;
+                                                    default:
+                                                        echo '<span class="badge bg-secondary">Tidak Diketahui</span>';
+                                                        break;
                                                 }
                                                 ?>
                                             </td>

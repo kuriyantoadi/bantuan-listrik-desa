@@ -7,7 +7,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form id="form-tambah-penerima" action="../penerima-lisdes/penerima_lisdes_tambah.php" method="POST">
+            <form id="form-tambah-penerima" action="../admin-penerima-lisdes/penerima_lisdes_tambah.php" method="POST">
                 <div class="modal-body">
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="nama_calon_konsumen">Nama Calon Konsumen</label>
