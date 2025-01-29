@@ -54,7 +54,7 @@ $query = "UPDATE tb_penerima_lisdes SET
 
 // Execute the query
 if (mysqli_query($koneksi, $query)) {
-    header("Location: ../admin-penerima-lisdes/penerima-lisdes.php?pesan=status_berhasil");
+    header("Location: ../admin-lisdes/penerima-lisdes.php?pesan=update_status_berhasil");
     exit();
 } else {
     echo "Error: " . mysqli_error($koneksi);

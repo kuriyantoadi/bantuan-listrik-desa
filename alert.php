@@ -76,6 +76,15 @@
                 </button>
             </div>
             ";
+        } elseif ($_GET['pesan'] == "update_status_berhasil") {
+            echo "
+           <div class='alert alert-info alert-dismissible fade show' role='alert pt-5' style='margin-top: 20px'>
+                <span class='alert-inner--text'><strong>Update Status Listrik Desa Berhasil</strong></span>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'>
+                    <span aria-hidden='true'>×</span>
+                </button>
+            </div>
+            ";
         } 
         
     }
