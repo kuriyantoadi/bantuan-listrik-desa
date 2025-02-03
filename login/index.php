@@ -123,8 +123,9 @@
                                                     <input class="input100 border-start-0 form-control ms-0" type="password"  name="password" placeholder="Password">
                                                 </div>
                                             
-                                                <div class="container-login100-form-btn">
-                                                    <input type="submit" value="Login" class="login100-form-btn btn-primary">                                                    
+                                               <div class="container-login100-form-btn">
+                                                    <input type="submit" value="Login" class="login100-form-btn btn-primary m-1">
+                                                    <a href="../home/" class="login100-form-btn btn-info m-1">Tabel Penerima LisDes</a>
                                                 </div>
                                             </form>   
                                         </div>
