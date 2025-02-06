@@ -32,9 +32,9 @@ if ($cek > 0) {
         $_SESSION['id_kecamatan'] = $login['id_kecamatan'];
         $_SESSION['id_kab_kota'] = $login['id_kab_kota'];
         header("location:../admin-staff-desa/index.php");
-    } elseif ($login['status'] == "manager") {
-        $_SESSION['status'] = "manager";
-        header("location:../manager/index.php");
+    } elseif ($login['status'] == "pimpinan") {
+        $_SESSION['status'] = "pimpinan";
+        header("location:../pimpinan/index.php");
     } else {
         header("location:index.php?pesan=gagal1");
     }
