@@ -15,7 +15,7 @@ $nama_staff_desa = mysqli_real_escape_string($koneksi, $_POST['nama_staff_desa']
 $id_kab_kota = mysqli_real_escape_string($koneksi, $_POST['id_kab_kota']);
 $id_kecamatan = mysqli_real_escape_string($koneksi, $_POST['id_kecamatan']);
 $id_desa = mysqli_real_escape_string($koneksi, $_POST['id_desa']);
-$status = "staff-desa-user";
+$status = "admin-staff-desa";
 
 // Cek apakah username mengandung spasi
 if (preg_match('/\s/', $username)) {
