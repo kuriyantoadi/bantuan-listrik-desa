@@ -32,7 +32,7 @@
                                 <?php include('../alert.php') ?>
 
                                 <!-- <button class="btn btn-icon btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#largemodal_tambah">Tambah<i class="fe fe-plus"></i></button> -->
-                                <?php include('penerima_lisdes_modal_tambah.php') ?>
+                                <!-- <?php include('penerima_lisdes_modal_tambah.php') ?> -->
 
                                 <table class="table table-bordered text-nowrap border-bottom" id="basic-datatable">
                                     <thead>
@@ -89,13 +89,13 @@
 
 
                                             <td class="text-center">
-                                                <a href="../admin-penerima-lisdes/penerima_lisdes_hapus.php?id_penerima_lisdes=<?= $d['id_penerima_lisdes'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
-                                                onclick="return confirm('Anda yakin Hapus data Penerima Listrik Desa <?php echo $d['nama_calon_konsumen']; ?> ?')"><i class="fe fe-trash-2"></i></a>
-                                                <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-edit"></i></button>
-                                                <!-- <button class="btn btn-icon btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#largemodal_status<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-check"></i></button> -->
+                                                <!-- <a href="../admin-penerima-lisdes/penerima_lisdes_hapus.php?id_penerima_lisdes=<?= $d['id_penerima_lisdes'] ?>" type="button" class="btn btn-icon btn-sm btn-danger" 
+                                                onclick="return confirm('Anda yakin Hapus data Penerima Listrik Desa <?php echo $d['nama_calon_konsumen']; ?> ?')"><i class="fe fe-trash-2"></i></a> -->
+                                                <!-- <button class="btn btn-icon btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#largemodal_edit<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-edit"></i></button> -->
+                                                <button class="btn btn-icon btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#largemodal_status<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-check"></i></button>
                                                 <button class="btn btn-icon btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#largemodal_detail<?= $d['id_penerima_lisdes'] ?>"><i class="fe fe-eye"></i></button>
                                                 
-                                                <?php include('penerima_lisdes_modal_edit.php') ?>
+                                                <!-- <?php include('penerima_lisdes_modal_edit.php') ?> -->
                                                 <?php include('penerima_lisdes_modal_status.php') ?>
                                                 <?php include('penerima_lisdes_modal_detail.php') ?>                                                                                                                                                                                                
                                             </td>

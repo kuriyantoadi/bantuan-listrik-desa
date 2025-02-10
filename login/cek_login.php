@@ -32,6 +32,10 @@ if ($cek > 0) {
         $_SESSION['id_kecamatan'] = $login['id_kecamatan'];
         $_SESSION['id_kab_kota'] = $login['id_kab_kota'];
         header("location:../admin-staff-desa/index.php");
+    } elseif ($login['status'] == "surveyor") {
+        $_SESSION['status'] = "surveyor";
+        $_SESSION['username'] = $login['username'];
+        header("location:../surveyor/index.php");
     } elseif ($login['status'] == "pimpinan") {
         $_SESSION['status'] = "pimpinan";
         header("location:../pimpinan/index.php");

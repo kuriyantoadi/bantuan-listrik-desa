@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-if ($_SESSION['status'] != "admin-lisdes") {
+if ($_SESSION['status'] != "surveyor") {
     header("location:../login/index.php?pesan=belum_login");
 }
 
