@@ -30,6 +30,7 @@
                             <div class="table-responsive">
                                 
                                 <?php include('../alert.php') ?>
+                                <a href="../pimpinan-penerima-lisdes/export_xls.php" class="btn btn-success">Download Excel</a>
 
                                 <!-- <button class="btn btn-icon btn-sm btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#largemodal_tambah">Tambah<i class="fe fe-plus"></i></button> -->
                                 <?php include('penerima_lisdes_modal_tambah.php') ?>
