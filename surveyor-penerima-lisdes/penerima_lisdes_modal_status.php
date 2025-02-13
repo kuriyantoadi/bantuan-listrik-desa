@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="../admin-penerima-lisdes/penerima_lisdes_modal_status_up.php" method="POST" enctype="multipart/form-data">
+                <form action="../surveyor-penerima-lisdes/penerima_lisdes_modal_status_up.php" method="POST" enctype="multipart/form-data">
                     <!-- Nama Calon Konsumen -->
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="view_nama_calon_konsumen">Nama Calon Konsumen</label>
@@ -78,7 +78,7 @@
                         <div class="col-md-9">
                             <?php if (!empty($d['photo_kwh'])): ?>
                                 <img src="../uploads/<?= basename($d['photo_kwh']) ?>" alt="Foto KWH" class="img-thumbnail" style="max-height: 200px;">
-                                <a href="../admin-penerima-lisdes/delete_photo.php?photo=photo_kwh&id=<?= $d['id_penerima_lisdes'] ?>" class="btn btn-danger btn-sm mt-2"
+                                <a href="../surveyor-penerima-lisdes/delete_photo.php?photo=photo_kwh&id=<?= $d['id_penerima_lisdes'] ?>" class="btn btn-danger btn-sm mt-2"
                                   onclick="return confirm('Apakah Anda yakin ingin menghapus foto ini?')">Hapus Foto</a>
                             <?php else: ?>
                                 <input type="file" name="photo_kwh" class="form-control">
@@ -92,7 +92,7 @@
                         <div class="col-md-9">
                             <?php if (!empty($d['photo_saklar'])): ?>
                                 <img src="../uploads/<?= basename($d['photo_saklar']) ?>" alt="Foto Saklar" class="img-thumbnail" style="max-height: 200px;">
-                                <a href="../admin-penerima-lisdes/delete_photo.php?photo=photo_saklar&id=<?= $d['id_penerima_lisdes'] ?>" class="btn btn-danger btn-sm mt-2"
+                                <a href="../surveyor-penerima-lisdes/delete_photo.php?photo=photo_saklar&id=<?= $d['id_penerima_lisdes'] ?>" class="btn btn-danger btn-sm mt-2"
                                   onclick="return confirm('Apakah Anda yakin ingin menghapus foto ini?')">Hapus Foto</a>
                             <?php else: ?>
                                 <input type="file" name="photo_saklar" class="form-control">
@@ -106,7 +106,7 @@
                         <div class="col-md-9">
                             <?php if (!empty($d['photo_lampu'])): ?>
                                 <img src="../uploads/<?= basename($d['photo_lampu']) ?>" alt="Foto Lampu" class="img-thumbnail" style="max-height: 200px;">
-                                <a href="../admin-penerima-lisdes/delete_photo.php?photo=photo_lampu&id=<?= $d['id_penerima_lisdes'] ?>" class="btn btn-danger btn-sm mt-2"
+                                <a href="../surveyor-penerima-lisdes/delete_photo.php?photo=photo_lampu&id=<?= $d['id_penerima_lisdes'] ?>" class="btn btn-danger btn-sm mt-2"
                                   onclick="return confirm('Apakah Anda yakin ingin menghapus foto ini?')">Hapus Foto</a>
                             <?php else: ?>
                                 <input type="file" name="photo_lampu" class="form-control">
@@ -115,20 +115,9 @@
                     </div>
 
                     <!-- Status Pemasangan -->
-                    <div class="row mb-4">
-                        <label class="col-md-3 form-label" for="status_pemasangan">Status Pemasangan</label>
-                        <div class="col-md-9">
-                            <input type="hidden" name="id_penerima_lisdes" value="<?= $d['id_penerima_lisdes'] ?>">
-                            <select name="status_pemasangan" id="status_pemasangan" class="form-control">
-                                <!-- <option value="Pendataan" <?= $d['status_pemasangan'] == 'Pendataan' ? 'selected' : '' ?>>Pendataan</option> -->
-                                <!-- <option value="Pemasangan" <?= $d['status_pemasangan'] == 'Pemasangan' ? 'selected' : '' ?>>Pemasangan</option> -->
-                                <option value="Monitoring" <?= $d['status_pemasangan'] == 'Monitoring' ? 'selected' : '' ?>>Monitoring</option>
-                                <option value="Selesai" <?= $d['status_pemasangan'] == 'Selesai' ? 'selected' : '' ?>>Selesai</option>
-                            </select>
-                        </div>
-                    </div>
-
+                    
                     <div class="modal-footer">
+                        <input type="hidden" name="id_penerima_lisdes" value="<?= $d['id_penerima_lisdes'] ?>">
                         <button type="submit" class="btn btn-sm btn-primary mt-2">Update Status Penerimaan Lisdes</button>
                         <button type="button" class="btn btn-sm btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
                     </div>

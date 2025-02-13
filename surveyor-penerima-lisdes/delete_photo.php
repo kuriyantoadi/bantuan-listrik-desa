@@ -20,7 +20,7 @@ if (isset($_GET['photo']) && isset($_GET['id'])) {
     }
 
     // Remove the file reference from the database
-    $update_query = "UPDATE tb_penerima_lisdes SET $photo = NULL WHERE id_penerima_lisdes = '$id'";
+    $update_query = "UPDATE tb_penerima_lisdes SET $photo = NULL, Status_pemasangan = 'Monitoring' WHERE id_penerima_lisdes = '$id'";
     if (mysqli_query($koneksi, $update_query)) {
         header("Location: ../surveyor/penerima-lisdes.php?pesan=photo_deleted");
     } else {

@@ -22,10 +22,10 @@ if ($cek > 0) {
     $_SESSION['id_user'] = $login['id_user'];
     $_SESSION['username'] = $username;
 
-    if ($login['status'] == "admin-lisdes") {
-        $_SESSION['status'] = "admin-lisdes";
+    if ($login['status'] == "admin-dinas") {
+        $_SESSION['status'] = "admin-dinas";
         $_SESSION['username'] = $username;
-        header("location:../admin-lisdes/index.php");
+        header("location:../admin-dinas/index.php");
     } elseif ($login['status'] == "admin-staff-desa") {
         $_SESSION['status'] = "admin-staff-desa";
         $_SESSION['id_desa'] = $login['id_desa'];

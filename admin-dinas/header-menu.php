@@ -108,11 +108,11 @@
                                 <span class="side-menu__label">Penerima Listrik Desa</span></a>
                             </li>
 
-                             <li>
+                             <!-- <li>
                                 <a class="side-menu__item has-link" href="landing-page.html" target="_blank">
                                 <i class="side-menu__icon fe fe-map"></i>
                                 <span class="side-menu__label">Lokasi Persebaran</span></a>
-                            </li>
+                            </li> -->
 
                              <li>
                                 <a class="side-menu__item has-link" href="staff-desa.php">
