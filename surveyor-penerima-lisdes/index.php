@@ -50,11 +50,16 @@
                                         <?php
                                         include '../koneksi.php';
                                         $no = 1;
-                                        $data = mysqli_query($koneksi, "SELECT tb_penerima_lisdes.*, tb_kab_kota.nama_kab_kota, tb_kecamatan.nama_kecamatan, tb_desa.nama_desa
+                                        $data = mysqli_query($koneksi, "SELECT tb_penerima_lisdes.*, 
+                                                                        tb_kab_kota.nama_kab_kota, 
+                                                                        tb_kecamatan.nama_kecamatan, 
+                                                                        tb_desa.nama_desa
                                                                         FROM tb_penerima_lisdes
                                                                         JOIN tb_kab_kota ON tb_penerima_lisdes.id_kab_kota = tb_kab_kota.id_kab_kota
                                                                         JOIN tb_kecamatan ON tb_penerima_lisdes.id_kecamatan = tb_kecamatan.id_kecamatan
-                                                                        JOIN tb_desa ON tb_penerima_lisdes.id_desa = tb_desa.id_desa;
+                                                                        JOIN tb_desa ON tb_penerima_lisdes.id_desa = tb_desa.id_desa
+                                                                        WHERE tb_penerima_lisdes.status_persetujuan_admin = 'Di Setujui';
+
                                                                         ");
                                         while ($d = mysqli_fetch_array($data)) {
                                         ?>

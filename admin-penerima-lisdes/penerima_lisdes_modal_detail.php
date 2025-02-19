@@ -92,7 +92,6 @@
                         <textarea class="form-control" disabled><?= $d['catatan'] ?></textarea>
                     </div>
                 </div>
-                
                 <!-- Menampilkan Foto -->
                 <?php 
                 $photos = ['photo_rumah' => 'Foto Rumah', 'photo_ktp' => 'Foto KTP', 'photo_sktm' => 'Foto SKTM', 'photo_kwh' => 'Foto KWH', 'photo_lampu' => 'Foto Lampu', 'photo_saklar' => 'Foto Saklar'];
@@ -109,10 +108,28 @@
                 </div>
                 <?php endforeach; ?>
                 <!-- Akhir Menampilkan Foto -->
+
+                <form action="../admin-penerima-lisdes/penerima_lisdes_persetujuan.php" method="post">
+                <div class="modal-body">
+                    <input type="hidden" name="id_penerima_lisdes" value="<?= $d['id_penerima_lisdes']; ?>">
+                    <div class="row mb-4">
+                        <label class="col-md-3 form-label">Status Persetujuan</label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="status_persetujuan_admin">
+                                <option value="Di Setujui" <?= ($d['status_persetujuan_admin'] == 'Di Setujui') ? 'selected' : '' ?>>Di Setujui</option>
+                                <option value="Di Tolak" <?= ($d['status_persetujuan_admin'] == 'Di Tolak') ? 'selected' : '' ?>>Di Tolak</option>
+                                <option value="Pengajuan" <?= ($d['status_persetujuan_admin'] == 'Pengajuan') ? 'selected' : '' ?>>Pengajuan</option>
+                            </select>
+                        </div>
+                    </div>
+               
+                
             </div>
             <div class="modal-footer">
-                <button class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-sm btn-primary"></input>
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
+            </form>
         </div>
     </div>
 </div>

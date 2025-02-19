@@ -99,12 +99,7 @@
                             <input type="number" name="jarak_rumah" id="edit_jarak_rumah" class="form-control" value="<?= $d['jarak_rumah'] ?>" step="0.01" required>
                         </div>
                     </div>
-                    <div class="row mb-4">
-                        <label class="col-md-3 form-label" for="edit_petugas_survei">Petugas Survei</label>
-                        <div class="col-md-9">
-                            <input type="text" name="petugas_survei" id="edit_petugas_survei" class="form-control" value="<?= $d['petugas_survei'] ?>" required>
-                        </div>
-                    </div>
+                   
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="edit_status_pemasangan">Status Pemasangan</label>
                         <div class="col-md-9">
