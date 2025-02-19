@@ -30,7 +30,6 @@ echo "<tr>
         <th>Membutuhkan Bantuan</th>
         <th>Menaati Ketentuan</th>
         <th>Jarak Rumah</th>
-        <th>Petugas Survei</th>
         <th>Status Pemasangan</th>
         <th>Catatan</th>
         <th>Photo Rumah</th>
@@ -55,7 +54,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>" . $row['membutuhkan_bantuan'] . "</td>";
     echo "<td>" . $row['menaati_ketentuan'] . "</td>";
     echo "<td>" . $row['jarak_rumah'] . "</td>";
-    echo "<td>" . $row['petugas_survei'] . "</td>";
     echo "<td>" . $row['status_pemasangan'] . "</td>";
     echo "<td>" . $row['catatan'] . "</td>";
     echo "<td>" . $row['photo_rumah'] . "</td>";
