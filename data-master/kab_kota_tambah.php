@@ -17,7 +17,7 @@ $cek_kab_kota = mysqli_query($koneksi, "SELECT nama_kab_kota from tb_kab_kota WH
 if (mysqli_num_rows($cek_kab_kota) > 0) {
     // Jika null, anggap berhasil
     header("Location: ../$session_user/kab_kota.php?pesan=data_sudah_ada");
-    exit();
+    // exit();
 }
 
 // Insert data into the database
