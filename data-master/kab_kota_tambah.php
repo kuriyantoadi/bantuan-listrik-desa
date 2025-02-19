@@ -12,12 +12,12 @@ include '../koneksi.php';
 $nama_kab_kota = mysqli_real_escape_string($koneksi, $_POST['nama_kab_kota']);
 
 // cek nama kab kota jika sama
-$cek_kab_kota = mysqli_query($koneksi, "SELECT nama_kab_kota from tb_kab_kota WHERE nama_kab_kota=$nama_kab_kota");
+$cek_kab_kota = mysqli_query($koneksi, "SELECT nama_kab_kota from tb_kab_kota WHERE nama_kab_kota='$nama_kab_kota' ");
 
 if (mysqli_num_rows($cek_kab_kota) > 0) {
     // Jika null, anggap berhasil
     header("Location: ../$session_user/kab_kota.php?pesan=data_sudah_ada");
-    // exit();
+    exit();
 }
 
 // Insert data into the database
