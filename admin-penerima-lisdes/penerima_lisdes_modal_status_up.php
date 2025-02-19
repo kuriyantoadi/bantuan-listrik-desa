@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status'] != "admin-lisdes") {
+if ($_SESSION['status'] != "admin-dinas") {
     header("location:../login.php?pesan=belum_login");
     exit();
 }
@@ -54,7 +54,7 @@ $query = "UPDATE tb_penerima_lisdes SET
 
 // Execute the query
 if (mysqli_query($koneksi, $query)) {
-    header("Location: ../admin-lisdes/penerima-lisdes.php?pesan=update_status_berhasil");
+    header("Location: ../admin-dinas/penerima-lisdes.php?pesan=update_status_berhasil");
     exit();
 } else {
     echo "Error: " . mysqli_error($koneksi);

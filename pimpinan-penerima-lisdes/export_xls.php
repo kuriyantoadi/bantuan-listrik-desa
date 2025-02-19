@@ -19,7 +19,7 @@ $result = mysqli_query($koneksi, $query);
 // Buat header tabel Excel
 echo "<table border='1'>";
 echo "<tr>
-        <th>ID</th>
+        <th>No</th>
         <th>Tanggal Permintaan</th>
         <th>Nama Calon Konsumen</th>
         <th>NIK</th>
@@ -32,18 +32,14 @@ echo "<tr>
         <th>Jarak Rumah</th>
         <th>Status Pemasangan</th>
         <th>Catatan</th>
-        <th>Photo Rumah</th>
-        <th>Photo KTP</th>
-        <th>Photo SKTM</th>
-        <th>Photo KWH</th>
-        <th>Photo Lampu</th>
-        <th>Photo Saklar</th>
+       
       </tr>";
 
 // Loop untuk menampilkan data dari database
+$no=1;
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
-    echo "<td>" . $row['id_penerima_lisdes'] . "</td>";
+    echo "<td>" . $no++; "</td>";
     echo "<td>" . $row['tgl_permintaan'] . "</td>";
     echo "<td>" . $row['nama_calon_konsumen'] . "</td>";
     echo "<td>" . $row['nik'] . "</td>";
@@ -56,12 +52,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>" . $row['jarak_rumah'] . "</td>";
     echo "<td>" . $row['status_pemasangan'] . "</td>";
     echo "<td>" . $row['catatan'] . "</td>";
-    echo "<td>" . $row['photo_rumah'] . "</td>";
-    echo "<td>" . $row['photo_ktp'] . "</td>";
-    echo "<td>" . $row['photo_sktm'] . "</td>";
-    echo "<td>" . $row['photo_kwh'] . "</td>";
-    echo "<td>" . $row['photo_lampu'] . "</td>";
-    echo "<td>" . $row['photo_saklar'] . "</td>";
+
     echo "</tr>";
 }
 
