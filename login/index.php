@@ -54,7 +54,7 @@
                 <!-- CONTAINER OPEN -->
                 <!-- <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="../assets/images/logo/logo-banten.png" class="header-brand-img" alt=""></a>
+                        <a href="#"><img src="../assets/images/logo/logo-banten.png" class="header-brand-img" alt=""></a>
                     </div>
                 </div> -->
 
@@ -63,7 +63,7 @@
                             <span class="login100-form-title pb-5">
                                 
                                 <div class="text-center mb-4">
-                                    <a href="index.html"><img src="../assets/images/logo/logo-banten.png" class="header-brand-img" alt=""></a>
+                                    <a href="#"><img src="../assets/images/logo/logo-banten.png" class="header-brand-img" alt=""></a>
                                 </div>
                                 Dinas Energi Dan Sumber Daya Mineral<br>
                                 Sistem Bantuan Listrik Desa
