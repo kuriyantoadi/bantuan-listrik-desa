@@ -30,34 +30,20 @@
                     </div>
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="edit_id_kab_kota">Kabupaten/Kota</label>
-                        <div class="col-md-9">
-                            <select name="id_kab_kota" id="edit_kab_kota" class="form-control" required>
-                                <option value="">Pilihan</option>
-                                <?php
-                                    $d1 = mysqli_query($koneksi, "SELECT id_kab_kota, nama_kab_kota FROM tb_kab_kota ORDER BY nama_kab_kota ASC");
-                                    while ($d_kab_kota = mysqli_fetch_array($d1)) {
-                                ?>
-                                    <option value="<?= $d_kab_kota['id_kab_kota'] ?>" <?= ($d['id_kab_kota'] == $d_kab_kota['id_kab_kota']) ? 'selected' : '' ?>>
-                                        <?= $d_kab_kota['nama_kab_kota'] ?>
-                                    </option>
-                                <?php } ?>
-                            </select>
+                         <div class="col-md-9">
+                            <input type="text" name="nama_kab_kota" id="nama_kab_kota" class="form-control" value="<?= $d['nama_kab_kota'] ?>" readonly>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="edit_id_kecamatan">Kecamatan</label>
                         <div class="col-md-9">
-                            <select name="id_kecamatan" id="edit_kecamatan" class="form-control" required>
-                                <option value="">-- Pilih Kecamatan --</option>
-                            </select>
+                            <input type="text" name="nama_kab_kota" id="nama_kab_kota" class="form-control" value="<?= $d['nama_kecamatan'] ?>" readonly>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="edit_id_desa">Desa</label>
                         <div class="col-md-9">
-                            <select name="id_desa" id="edit_desa" class="form-control" required>
-                                <option value="">-- Pilih Desa --</option>
-                            </select>
+                            <input type="text" name="nama_kab_kota" id="nama_kab_kota" class="form-control" value="<?= $d['nama_desa'] ?>" readonly>
                         </div>
                     </div>
                     <div class="row mb-4">
@@ -67,17 +53,6 @@
                                 <option value="" <?= (empty($d['membutuhkan_bantuan'])) ? 'selected' : '' ?>>Pilihan</option>
                                 <option value="Ya" <?= ($d['membutuhkan_bantuan'] == 'Ya') ? 'selected' : '' ?>>Ya</option>
                                 <option value="Tidak" <?= ($d['membutuhkan_bantuan'] == 'Tidak') ? 'selected' : '' ?>>Tidak</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4">
-                        <label class="col-md-3 form-label" for="edit_menunggu_bantuan">Menunggu Bantuan</label>
-                        <div class="col-md-9">
-                            <select name="menunggu_bantuan" id="edit_menunggu_bantuan" class="form-control" required>
-                                <option value="" <?= (empty($d['menunggu_bantuan'])) ? 'selected' : '' ?>>Pilihan</option>
-                                <option value="Ya" <?= ($d['menunggu_bantuan'] == 'Ya') ? 'selected' : '' ?>>Ya</option>
-                                <option value="Tidak" <?= ($d['menunggu_bantuan'] == 'Tidak') ? 'selected' : '' ?>>Tidak</option>
                             </select>
                         </div>
                     </div>
