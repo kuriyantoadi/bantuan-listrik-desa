@@ -41,19 +41,19 @@
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Desa</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['id_desa'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['nama_desa'] ?>" disabled>
                     </div>
                 </div>
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Kecamatan</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['id_kecamatan'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['nama_kecamatan'] ?>" disabled>
                     </div>
                 </div>
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Kabupaten/Kota</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['id_kab_kota'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['nama_kab_kota'] ?>" disabled>
                     </div>
                 </div>
                 <div class="row mb-4">
