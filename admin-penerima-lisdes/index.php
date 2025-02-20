@@ -85,28 +85,7 @@
                                                 ?>
                                             </td>
                                             <td class="text-center">
-                                                <?php
-                                                switch ($d['status_pemasangan']) {
-                                                    case 'Pendataan':
-                                                        echo '<span class="badge bg-primary">Pendataan</span>';
-                                                        break;
-                                                    case 'Belum Terpasang':
-                                                        echo '<span class="badge bg-primary">Pendataan</span>';
-                                                        break;
-                                                    case 'Pemasangan':
-                                                        echo '<span class="badge bg-info">Pemasangan</span>';
-                                                        break;
-                                                    case 'Monitoring':
-                                                        echo '<span class="badge bg-warning">Monitoring</span>';
-                                                        break;
-                                                    case 'Sudah Terpasang':
-                                                        echo '<span class="badge bg-success">Selesai</span>';
-                                                        break;
-                                                    default:
-                                                        echo '<span class="badge bg-secondary">Tidak Diketahui</span>';
-                                                        break;
-                                                }
-                                                ?>
+                                                <?php include('../case_status_pemasangan.php') ?>
                                             </td>
 
                                             <td class="text-center">

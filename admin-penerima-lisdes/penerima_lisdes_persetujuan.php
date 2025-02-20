@@ -11,8 +11,12 @@ include '../koneksi.php';
 $id_penerima_lisdes = mysqli_real_escape_string($koneksi, $_POST['id_penerima_lisdes']);
 $status_persetujuan_admin = mysqli_real_escape_string($koneksi, $_POST['status_persetujuan_admin']);
 
+if($status_persetujuan_admin == "Di Tolak"){
+    $status_pemasangan = "Di Tolak";
+}
+
 // Query untuk memperbarui status persetujuan
-$query = "UPDATE tb_penerima_lisdes SET status_persetujuan_admin = '$status_persetujuan_admin' WHERE id_penerima_lisdes = '$id_penerima_lisdes'";
+$query = "UPDATE tb_penerima_lisdes SET status_persetujuan_admin = '$status_persetujuan_admin', status_pemasangan='$status_pemasangan' WHERE id_penerima_lisdes = '$id_penerima_lisdes'";
 
 // Eksekusi query
 if (mysqli_query($koneksi, $query)) {
