@@ -50,7 +50,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>" . $row['membutuhkan_bantuan'] . "</td>";
     echo "<td>" . $row['menaati_ketentuan'] . "</td>";
     echo "<td>" . $row['jarak_rumah'] . "</td>";
-    echo "<td>" . $row['status_pemasangan'] . "</td>";
+    echo "<td>" . $row['status_persetujuan_admin'] . "</td>";
     echo "<td>" . $row['catatan'] . "</td>";
 
     echo "</tr>";

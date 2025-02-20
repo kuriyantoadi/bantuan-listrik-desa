@@ -13,6 +13,10 @@ $status_persetujuan_admin = mysqli_real_escape_string($koneksi, $_POST['status_p
 
 if($status_persetujuan_admin == "Di Tolak"){
     $status_pemasangan = "Di Tolak";
+}elseif($status_persetujuan_admin == "Di Setujui"){
+    $status_pemasangan = "Di Setujui";
+}elseif($status_persetujuan_admin == "Pengajuan"){
+    $status_pemasangan = "Pengajuan";
 }
 
 // Query untuk memperbarui status persetujuan

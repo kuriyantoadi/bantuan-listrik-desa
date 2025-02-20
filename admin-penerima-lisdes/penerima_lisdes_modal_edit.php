@@ -75,7 +75,7 @@
                         </div>
                     </div>
                    
-                    <div class="row mb-4">
+                    <!-- <div class="row mb-4">
                         <label class="col-md-3 form-label" for="edit_status_pemasangan">Status Pemasangan</label>
                         <div class="col-md-9">
                             <select name="status_pemasangan" id="edit_status_pemasangan" class="form-control" required>
@@ -84,7 +84,7 @@
                                 <option value="Sudah Terpasang" <?= ($d['status_pemasangan'] == 'Sudah Terpasang') ? 'selected' : '' ?>>Sudah Terpasang</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row mb-4">
                         <label class="col-md-3 form-label" for="edit_catatan">Catatan</label>
                         <div class="col-md-9">

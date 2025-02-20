@@ -44,7 +44,7 @@ function upload_file($file, $prefix, $upload_dir) {
 }
 
 // Prepare SQL query to update status
-$query = "UPDATE tb_penerima_lisdes SET status_pemasangan = 'Selesai'";
+$query = "UPDATE tb_penerima_lisdes SET status_persetujuan_admin = 'Selesai'";
 
 // Hanya tambahkan kolom yang memiliki nilai baru
 if ($photo_kwh_path) {

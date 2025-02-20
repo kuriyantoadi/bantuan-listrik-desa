@@ -40,8 +40,7 @@
                                             <th class="wd-15p border-bottom-0 text-center">Nama Penerima</th>                                           
                                             <th class="wd-15p border-bottom-0 text-center">Nama Kecamatan</th>
                                             <th class="wd-15p border-bottom-0 text-center">Nama Desa</th>
-                                            <th class="wd-15p border-bottom-0 text-center">Persetujuan Admin</th>                                                                                                                                                                            
-                                            <th class="wd-15p border-bottom-0 text-center">Pemasangan</th>                                                                                                                                                                            
+                                            <th class="wd-15p border-bottom-0 text-center">Status Pemasangan</th>                                                                                                                                                                            
                                             <th class="wd-25p border-bottom-0 text-center">Pilihan</th>
                                         </tr>
                                     </thead>
@@ -64,24 +63,7 @@
                                             <td class=""><?= $d['nama_calon_konsumen'] ?></td>
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
-                                            <td class="text-center">
-                                                <?php
-                                                switch ($d['status_persetujuan_admin']) {
-                                                    case 'Di Setujui':
-                                                        echo '<span class="badge bg-success">Di Setujui</span>';
-                                                        break;
-                                                    case 'Di Tolak':
-                                                        echo '<span class="badge bg-danger">Di Tolak</span>';
-                                                        break;
-                                                    case 'Pengajuan':
-                                                        echo '<span class="badge bg-warning">Pengajuan</span>';
-                                                        break;
-                                                    default:
-                                                        echo '<span class="badge bg-dark">Tidak Diketahui</span>';
-                                                        break;
-                                                }
-                                                ?>
-                                            </td>
+                                            
                                             <td class="text-center">
                                                <?php include('../case_status_pemasangan.php') ?>
                                             </td>

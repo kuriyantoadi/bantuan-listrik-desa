@@ -1,22 +1,13 @@
  <?php
-    switch ($d['status_pemasangan']) {
+    switch ($d['status_persetujuan_admin']) {
         case 'Pendataan':
-            echo '<span class="badge bg-primary">Pendataan</span>';
-            break;
-        case 'Belum Terpasang':
             echo '<span class="badge bg-primary">Pendataan</span>';
             break;
         case 'Di Tolak':
             echo '<span class="badge bg-danger">Di Tolak</span>';
             break;
-        case 'Pemasangan':
-            echo '<span class="badge bg-info">Pemasangan</span>';
-            break;
-        case 'Monitoring':
-            echo '<span class="badge bg-warning">Monitoring</span>';
-            break;
-        case 'Sudah Terpasang':
-            echo '<span class="badge bg-success">Selesai</span>';
+        case 'Di Setujui':
+            echo '<span class="badge bg-info">Disetujui dan Proses Pemasangan</span>';
             break;
         case 'Selesai':
             echo '<span class="badge bg-success">Selesai</span>';

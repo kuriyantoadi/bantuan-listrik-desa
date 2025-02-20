@@ -68,20 +68,7 @@
                                             <td class=""><?= $d['nama_desa'] ?></td>
                                             <!-- <td class="text-center">
                                                 <?php
-                                                switch ($d['status_persetujuan_admin']) {
-                                                    case 'Di Setujui':
-                                                        echo '<span class="badge bg-success">Di Setujui</span>';
-                                                        break;
-                                                    case 'Di Tolak':
-                                                        echo '<span class="badge bg-danger">Di Tolak</span>';
-                                                        break;
-                                                    case 'Pengajuan':
-                                                        echo '<span class="badge bg-warning">Pengajuan</span>';
-                                                        break;
-                                                    default:
-                                                        echo '<span class="badge bg-dark">Tidak Diketahui</span>';
-                                                        break;
-                                                }
+                                                include('../case_status_pemasangan.php')
                                                 ?>
                                             </td> -->
                                             <td class="text-center">

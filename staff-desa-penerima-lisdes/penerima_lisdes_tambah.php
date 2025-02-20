@@ -22,7 +22,7 @@ $membutuhkan_bantuan = mysqli_real_escape_string($koneksi, $_POST['membutuhkan_b
 $menaati_ketentuan = mysqli_real_escape_string($koneksi, $_POST['menaati_ketentuan']);
 $jarak_rumah = mysqli_real_escape_string($koneksi, $_POST['jarak_rumah']);
 $catatan = mysqli_real_escape_string($koneksi, $_POST['catatan']);
-$status_pemasangan = "Pendataan";
+$status_persetujuan_admin = "Pendataan";
 
 // Validasi NIK
 $cek_nik = mysqli_query($koneksi, "SELECT nik FROM tb_penerima_lisdes WHERE nik='$nik'");

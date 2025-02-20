@@ -58,7 +58,8 @@
                                                                         JOIN tb_kab_kota ON tb_penerima_lisdes.id_kab_kota = tb_kab_kota.id_kab_kota
                                                                         JOIN tb_kecamatan ON tb_penerima_lisdes.id_kecamatan = tb_kecamatan.id_kecamatan
                                                                         JOIN tb_desa ON tb_penerima_lisdes.id_desa = tb_desa.id_desa
-                                                                        WHERE tb_penerima_lisdes.status_persetujuan_admin = 'Di Setujui';
+                                                                        WHERE tb_penerima_lisdes.status_persetujuan_admin = 'Di Setujui' OR
+                                                                         tb_penerima_lisdes.status_persetujuan_admin = 'Selesai';
 
                                                                         ");
                                         while ($d = mysqli_fetch_array($data)) {

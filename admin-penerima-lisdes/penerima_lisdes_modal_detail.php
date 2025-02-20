@@ -105,9 +105,15 @@
                         <label class="col-md-3 form-label">Status Persetujuan</label>
                         <div class="col-md-9">
                             <select class="form-control" name="status_persetujuan_admin">
-                                <option value="Di Setujui" <?= ($d['status_persetujuan_admin'] == 'Di Setujui') ? 'selected' : '' ?>>Di Setujui</option>
-                                <option value="Di Tolak" <?= ($d['status_persetujuan_admin'] == 'Di Tolak') ? 'selected' : '' ?>>Di Tolak</option>
-                                <option value="Pengajuan" <?= ($d['status_persetujuan_admin'] == 'Pengajuan') ? 'selected' : '' ?>>Pengajuan</option>
+                                <option value="Pendataan" <?= ($d['status_persetujuan_admin'] === 'Pendataan') ? 'selected' : '' ?>>
+                                    Pendataan
+                                </option>
+                                <option value="Di Setujui" <?= ($d['status_persetujuan_admin'] === 'Di Setujui') ? 'selected' : '' ?>>
+                                    Disetujui dan Pemasangan
+                                </option>
+                                <option value="Di Tolak" <?= ($d['status_persetujuan_admin'] === 'Di Tolak') ? 'selected' : '' ?>>
+                                    Ditolak
+                                </option>
                             </select>
                         </div>
                     </div>
