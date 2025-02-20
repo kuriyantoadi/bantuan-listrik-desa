@@ -82,7 +82,7 @@
                                                     case 'Monitoring':
                                                         echo '<span class="badge bg-warning">Monitoring</span>';
                                                         break;
-                                                    case 'Selesai':
+                                                    case 'Sudah Terpasang':
                                                         echo '<span class="badge bg-success">Selesai</span>';
                                                         break;
                                                     default:
