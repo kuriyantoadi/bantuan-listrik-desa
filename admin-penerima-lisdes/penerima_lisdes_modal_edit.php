@@ -7,7 +7,7 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form id="form-edit-penerima" action="../penerima-lisdes/penerima_lisdes_edit.php" method="POST">
+            <form id="form-edit-penerima" action="../admin-penerima-lisdes/penerima_lisdes_edit.php" method="POST">
                 <div class="modal-body">
                     <input type="hidden" name="id_penerima_lisdes" value="<?= $d['id_penerima_lisdes'] ?>">
                     <div class="row mb-4">
