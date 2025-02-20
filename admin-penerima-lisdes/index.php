@@ -42,8 +42,8 @@
                                             <!-- <th class="wd-15p border-bottom-0 text-center">Nama Kab/Kota</th>                                            -->
                                             <th class="wd-15p border-bottom-0 text-center">Nama Kecamatan</th>
                                             <th class="wd-15p border-bottom-0 text-center">Nama Desa</th>
+                                            <!-- <th class="wd-15p border-bottom-0 text-center">Persetujuan Admin</th>                                                                                                                                                                             -->
                                             <th class="wd-15p border-bottom-0 text-center">Persetujuan Admin</th>                                                                                                                                                                            
-                                            <th class="wd-15p border-bottom-0 text-center">Pemasangan</th>                                                                                                                                                                            
                                             <th class="wd-25p border-bottom-0 text-center">Pilihan</th>
                                         </tr>
                                     </thead>
@@ -66,7 +66,7 @@
                                             <!-- <td class=""><?php echo $d['id_kab_kota'] ?></td> -->
                                             <td class=""><?= $d['nama_kecamatan'] ?></td>
                                             <td class=""><?= $d['nama_desa'] ?></td>
-                                            <td class="text-center">
+                                            <!-- <td class="text-center">
                                                 <?php
                                                 switch ($d['status_persetujuan_admin']) {
                                                     case 'Di Setujui':
@@ -83,7 +83,7 @@
                                                         break;
                                                 }
                                                 ?>
-                                            </td>
+                                            </td> -->
                                             <td class="text-center">
                                                 <?php include('../case_status_pemasangan.php') ?>
                                             </td>
