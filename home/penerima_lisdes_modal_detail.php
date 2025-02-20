@@ -8,12 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- <div class="row mb-4">
-                    <label class="col-md-3 form-label">ID Penerima Lisdes</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['id_penerima_lisdes'] ?>" disabled>
-                    </div>
-                </div> -->
+              
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Tanggal Permintaan</label>
                     <div class="col-md-9">
