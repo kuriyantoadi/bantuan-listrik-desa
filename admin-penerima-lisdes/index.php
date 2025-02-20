@@ -90,6 +90,9 @@
                                                     case 'Pendataan':
                                                         echo '<span class="badge bg-primary">Pendataan</span>';
                                                         break;
+                                                    case 'Belum Terpasang':
+                                                        echo '<span class="badge bg-primary">Pendataan</span>';
+                                                        break;
                                                     case 'Pemasangan':
                                                         echo '<span class="badge bg-info">Pemasangan</span>';
                                                         break;
@@ -97,7 +100,7 @@
                                                         echo '<span class="badge bg-warning">Monitoring</span>';
                                                         break;
                                                     case 'Sudah Terpasang':
-                                                        echo '<span class="badge bg-success">Sudah Terpasang</span>';
+                                                        echo '<span class="badge bg-success">Selesai</span>';
                                                         break;
                                                     default:
                                                         echo '<span class="badge bg-secondary">Tidak Diketahui</span>';

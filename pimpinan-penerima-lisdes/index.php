@@ -91,6 +91,9 @@
                                                     case 'Pendataan':
                                                         echo '<span class="badge bg-primary">Pendataan</span>';
                                                         break;
+                                                    case 'Belum Terpasang':
+                                                        echo '<span class="badge bg-primary">Pendataan</span>';
+                                                        break;
                                                     case 'Pemasangan':
                                                         echo '<span class="badge bg-info">Pemasangan</span>';
                                                         break;
