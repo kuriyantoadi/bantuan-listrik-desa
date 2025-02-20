@@ -97,7 +97,7 @@
                                                         echo '<span class="badge bg-warning">Monitoring</span>';
                                                         break;
                                                     case 'Selesai':
-                                                        echo '<span class="badge bg-success">Selesai</span>';
+                                                        echo '<span class="badge bg-success">Sudah Terpasang</span>';
                                                         break;
                                                     default:
                                                         echo '<span class="badge bg-secondary">Tidak Diketahui</span>';
