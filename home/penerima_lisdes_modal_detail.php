@@ -53,7 +53,7 @@
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Kabupaten/Kota</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['kab_kota'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['nama_kab_kota'] ?>" disabled>
                     </div>
                 </div>
                 <div class="row mb-4">
