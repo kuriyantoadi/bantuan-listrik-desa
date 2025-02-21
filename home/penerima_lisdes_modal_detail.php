@@ -73,7 +73,7 @@
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Pendataan</label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['status_persetujan_admin'] ?>" disabled>
+                        <input type="text" class="form-control" value="<?= $d['status_persetujuan_admin'] ?>" disabled>
                     </div>
                 </div>
             
