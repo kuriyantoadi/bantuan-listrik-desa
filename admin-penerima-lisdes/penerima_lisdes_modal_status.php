@@ -115,7 +115,7 @@
                     </div>
 
                     <!-- Status Pemasangan -->
-                    <div class="row mb-4">
+                    <!-- <div class="row mb-4">
                         <label class="col-md-3 form-label" for="status_pemasangan">Status Pemasangan</label>
                         <div class="col-md-9">
                             <input type="hidden" name="id_penerima_lisdes" value="<?= $d['id_penerima_lisdes'] ?>">
@@ -126,7 +126,7 @@
                                 <option value="Selesai" <?= $d['status_pemasangan'] == 'Selesai' ? 'selected' : '' ?>>Selesai</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-sm btn-primary mt-2">Update Status Penerimaan Lisdes</button>

@@ -69,12 +69,7 @@
                         <input type="text" class="form-control" value="<?= $d['jarak_rumah'] ?>" disabled>
                     </div>
                 </div>
-                <div class="row mb-4">
-                    <label class="col-md-3 form-label">Status Pemasangan</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" value="<?= $d['status_pemasangan'] ?>" disabled>
-                    </div>
-                </div>
+               
                 <div class="row mb-4">
                     <label class="col-md-3 form-label">Catatan</label>
                     <div class="col-md-9">
