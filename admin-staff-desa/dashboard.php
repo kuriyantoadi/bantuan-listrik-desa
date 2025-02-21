@@ -3,7 +3,7 @@
 include('../koneksi.php');
 
 // Query untuk menghitung jumlah baris
-$sql = "SELECT COUNT(*) AS jumlah_baris FROM `tb_penerima_lisdes` WHERE `id_desa` = '$id_desa'";
+$sql = "SELECT COUNT(*) AS jumlah_baris FROM `tb_penerima_lisdes`";
 $result = $koneksi->query($sql); // Menghapus parameter yang salah
 
 if ($result) {
@@ -14,18 +14,7 @@ if ($result) {
 }
 
 // jumlah yang sudah acc
-$sql = "SELECT COUNT(*) AS jumlah_selesai FROM `tb_penerima_lisdes` WHERE `status_pemasangan` = 'selesai' AND `id_desa` = '$id_desa'";
-$result = $koneksi->query($sql);
-
-if ($result) {
-    $row = $result->fetch_assoc();
-    $jumlah_selesai = $row['jumlah_selesai'];
-} else {
-    $jumlah_selesai = 0; // Jika query gagal, default nilai 0
-}
-
-// jumlah yang sudah acc
-$sql = "SELECT COUNT(*) AS jumlah_pendataan FROM `tb_penerima_lisdes` WHERE `status_pemasangan` = 'pendataan' AND `id_desa` = '$id_desa'";
+$sql = "SELECT COUNT(*) AS jumlah_pendataan FROM `tb_penerima_lisdes` WHERE `status_persetujuan_admin` = 'Pendataan'";
 $result = $koneksi->query($sql);
 
 if ($result) {
@@ -35,16 +24,40 @@ if ($result) {
     $jumlah_pendataan = 0; // Jika query gagal, default nilai 0
 }
 
-// jumlah yang sudah pemasangan
-$sql = "SELECT COUNT(*) AS jumlah_pemasangan FROM `tb_penerima_lisdes` WHERE `status_pemasangan` = 'pemasangan' AND `id_desa` = '$id_desa'";
+// jumlah yang sudah acc
+$sql = "SELECT COUNT(*) AS jumlah_ditolak FROM `tb_penerima_lisdes` WHERE `status_persetujuan_admin` = 'Di Tolak'";
 $result = $koneksi->query($sql);
 
 if ($result) {
     $row = $result->fetch_assoc();
-    $jumlah_pemasangan = $row['jumlah_pemasangan'];
+    $jumlah_ditolak = $row['jumlah_ditolak'];
 } else {
-    $jumlah_pemasangan = 0; // Jika query gagal, default nilai 0
+    $jumlah_ditolak = 0; // Jika query gagal, default nilai 0
 }
+
+// jumlah yang sudah pemasangan
+$sql = "SELECT COUNT(*) AS jumlah_disetujui FROM `tb_penerima_lisdes` WHERE `status_persetujuan_admin` = 'Di Setujui'";
+$result = $koneksi->query($sql);
+
+if ($result) {
+    $row = $result->fetch_assoc();
+    $jumlah_disetujui = $row['jumlah_disetujui'];
+} else {
+    $jumlah_disetujui = 0; // Jika query gagal, default nilai 0
+}
+
+// jumlah yang sudah pemasangan
+$sql = "SELECT COUNT(*) AS jumlah_selesai FROM `tb_penerima_lisdes` WHERE `status_persetujuan_admin` = 'Selesai'";
+$result = $koneksi->query($sql);
+
+if ($result) {
+    $row = $result->fetch_assoc();
+    $jumlah_selesai = $row['jumlah_selesai'];
+} else {
+    $jumlah_selesai = 0; // Jika query gagal, default nilai 0
+}
+
+
 
 
 
@@ -66,22 +79,22 @@ if ($result) {
 
             <!-- ROW OPEN -->
             <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-12">
                     <div class="card">
                         <div class="card-body text-center">
                             <i class="fa fa-users text-info fa-3x"></i>
                             <h6 class="mt-4 mb-2">Penerima Bantuan LisDes</h6>
-                            <h2 class="mb-2 number-font"><?php echo number_format($jumlah_baris); ?></h2>
+                            <h2 class="mb-2 number-font"><?php echo number_format($jumlah_pendataan); ?></h2>
                             <p class="text-muted">Jumlah Penerima Bantuan Listrik Desa</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- COL END -->
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class="card">
                         <div class="card-body text-center">
-                            <i class="fa fa-search text-primary fa-3x"></i>
+                            <i class="fa fa-file-text text-primary fa-3x"></i>
                             <h6 class="mt-4 mb-2">Pendataan</h6>
                             <h2 class="mb-2 number-font"><?php echo number_format($jumlah_pendataan); ?></h2>
                             <p class="text-muted">Jumlah Penerima Status Pendataan</p>
@@ -89,18 +102,29 @@ if ($result) {
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class="card">
                         <div class="card-body text-center">
-                            <i class="fa fa-lightbulb-o text-warning fa-3x"></i>
-                            <h6 class="mt-4 mb-2">Pemasangan</h6>
-                            <h2 class="mb-2 number-font"><?php echo number_format($jumlah_selesai); ?></h2>
-                            <p class="text-muted">Jumlah Status Penerima Listrik Pemasangan</p>
+                            <i class="fa fa-star text-primary fa-3x"></i>
+                            <h6 class="mt-4 mb-2">Disetujui</h6>
+                            <h2 class="mb-2 number-font"><?php echo number_format($jumlah_disetujui); ?></h2>
+                            <p class="text-muted">Jumlah Penerima Status Disetujui</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fa fa-close text-danger fa-3x"></i>
+                            <h6 class="mt-4 mb-2">Tolak</h6>
+                            <h2 class="mb-2 number-font"><?php echo number_format($jumlah_ditolak); ?></h2>
+                            <p class="text-muted">Jumlah Status Penerima Listrik Tolak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class="card">
                         <div class="card-body text-center">
                             <i class="fa fa-check text-success fa-3x"></i>
